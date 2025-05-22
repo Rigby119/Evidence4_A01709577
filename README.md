@@ -27,10 +27,10 @@ The solution follows the **parallel programming paradigm**. The logic is as foll
 [ Main Thread ]  
 |  
 |---> [ Thread 1 ] --> Partial Sum 1  
-|---> [ Thread 2 ] --> Partial Sum 2 |  
-...
-|---> [ Thread N-1 ] --> Partial Sum N-1 | 
-|---> [ Thread N ] --> Combine --> total_sum /
+|---> [ Thread 2 ] --> Partial Sum 2  
+|...
+|---> [ Thread N-1 ] --> Partial Sum N-1  
+|---> [ Thread N ] --> Combine --> total_sum
 
 ---
 
