@@ -124,7 +124,7 @@ int main()
     std::cout << "\n\n=== CONCURRENT SIMULATION ===\n\n";
 
     int particle_count = 10000;
-    int seconds = 10;
+    int seconds = 60;
     int frames = seconds * 60;
     std::cout << "Starting simulation for " << seconds
               << " seconds (" << frames << " frames)\n\n";
@@ -138,7 +138,7 @@ int main()
     {
         system.updateFrame();
 
-        if (fr % 50 == 0)
+        if (fr % (frames / 10) == 0)
         {
             float progress = (float)fr / frames * 100.0f;
 

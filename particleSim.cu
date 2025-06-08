@@ -59,7 +59,7 @@ private:
     const float world_height = 600.0f;
     const float dt = 0.016f;
 
-    int block_size = 256;
+    int block_size = 256; // Recommended for a GPU as NVIDIA GeForce 4050 Laptop
     int grid_size;
 
 public:
@@ -130,8 +130,8 @@ int main()
 {
     std::cout << "\n\n=== CUDA SIMULATION ===\n\n";
 
-    int particle_count = 10000; // Start with more particles for GPU
-    int seconds = 10;
+    int particle_count = 10000;
+    int seconds = 60;
     int frames = seconds * 60;
     std::cout << "Starting simulation for " << seconds
               << " seconds (" << frames << " frames)\n\n";
@@ -145,7 +145,7 @@ int main()
     {
         system.updateFrame();
 
-        if (fr % 50 == 0)
+        if (fr % (frames / 10) == 0)
         {
             float progress = (float)fr / frames * 100.0f;
 
